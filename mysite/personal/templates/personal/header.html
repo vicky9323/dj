@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Django website</title>
+	<meta charset="utf-8">
+{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static 'personal/css/custom.css' %}" type = "text/css"/>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="body" style="background-color:#f6f6f6">
+<header>
+<!--<img src="{% static 'personal/img/logo.png' %}" class="logo" ' alt="logo">-->
+
+{% include "personal/includes/htmlsnippet.html" %}
+
+
+</header>
+
+<section class="home-hero">
+<h1> Making things look great<span> for companies who make great stuff</span></h1>
+<a href="" class="button button-accent">See our work</a>
+</section>
+<section class="home-about">
+<div class="home-about-textbox">
+	<h1>Who We Are</h1>
+<p>Sit by the fire drink an alcohol and face the sea that is what the life is you should reconsder it when you are wasting it so please reconsider<strong>Rub face on Owner</strong>Peer out from a window and give a shoutout at the people sitting just beside you.from a window and give a shoutout at the people sitting just beside you</p>
+</div>
+
+	
+</section>
+
+<section class="portfolio">
+<h2>Hii!! {{ user }} </h2>
+
+<h1>Some of our recent Work </h1>
+<!-- portfolio item 1-->
+<figure class="port-item">
+<img src="{% static 'personal/img/1.jpg' %}" alt="portfolio item">
+<figcaption class="port-desc">
+	<p>Project Title</p>
+	<a href="" class="button button-accent button-small">Project Details</a>
+</figcaption>
+	
+</figure>
+<!-- portfolio item 2-->
+<figure class="port-item">
+<img src="{% static 'personal/img/2.jpg' %}" alt="portfolio item">
+<figcaption class="port-desc">
+	<p>Project Title</p>
+	<a href="" class="button button-accent button-small">Project Details</a>
+</figcaption>
+	
+</figure>
+<!-- portfolio item 3-->
+<figure class="port-item">
+<img src="{% static 'personal/img/3.jpg' %}" alt="portfolio item">
+<figcaption class="port-desc" >
+	<p>Project Title</p>
+	<a href="" class="button button-accent button-small">Project Details</a>
+</figcaption>
+	
+</figure>
+<!-- portfolio item 4-->
+<figure class="port-item">
+<img src="{% static 'personal/img/4.jpg' %}" alt="portfolio item">
+<figcaption class="port-desc" >
+	<p>Project Title</p>
+	<a href="" class="button button-accent button-small">Project Details</a>
+</figcaption>
+	
+</figure>
+<!-- portfolio item 5-->
+<figure class="port-item">
+<img src="{% static 'personal/img/5.jpg' %}" alt="portfolio item">
+<figcaption class="port-desc" >
+	<p>Project Title</p>
+	<a href="" class="button button-accent button-small">Project Details</a>
+</figcaption>
+	
+</figure>
+<!-- portfolio item 6-->
+<figure class="port-item">
+<img src="{% static 'personal/img/6.jpg' %}" alt="portfolio item">
+<figcaption class="port-desc" >
+	<p>Project Title</p>
+	<a href="" class="button button-accent button-small">Project Details</a>
+</figcaption>
+	
+</figure>
+
+	
+</section>
+<footer>
+<div class="col-3">
+		<p>
+		out from a window and give a shoutout at the people sitting just beside you.from a window and give a shoutout at the people sitting just beside you
+	</p>
+</div>
+
+
+<div class="col-1">
+		<ul class="unstyled-list">
+		<li><strong>Vikas</strong></li>
+		<li>Vikas</li>
+		<li>Vikas</li>
+		<li>Vikas</li>
+		<li>Vikas</li>
+		<li>Vikas</li>
+	</ul>
+</div>
+<div class="col-1">
+		<ul class="unstyled-list">
+		<li><strong>Vikas</strong></li>
+		<li>Vikas</li>
+		<li>Vikas</li>
+		<li>Vikas</li>
+		<li>Vikas</li>
+		<li>Vikas</li>
+	</ul>
+</div>
+
+<div class="col-1">
+		<ul class="unstyled-list">
+		<li><strong>Vikas</strong></li>
+		<li>Vikas</li>
+		<li>Vikas</li>
+		<li>Vikas</li>
+		<li>Vikas</li>
+		<li>Vikas</li>
+	</ul>
+</div>
+
+
+
+
+</footer>
+
+
+			   {% block content %}
+			   {% endblock %}
+
+
+</body>
+
+</html>

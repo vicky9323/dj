@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About us | Vikas</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static 'personal/css/custom.css' %}" type = "text/css"/>
+</head>
+<body>
+{% include "personal/includes/htmlsnippet.html" %}
+<p>{{ title }}</p>
+<p>{{ content }}</p>
+<h1 class="text-center" style="font-size: 4vw;">HII this is about us page!!</h1>
+</body>
+</html>

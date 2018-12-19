@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>custom bootstrap  vertical tabs</title>
+  
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+    
+<style type="text/css">
+  .tabs-left {
+  border-bottom: none;
+  border-right: 1px solid #ddd;
+  border: 1px solid #ccc;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.tabs-left>li {
+  float: none;
+ margin:0px;
+  
+}
+
+.tabs-left>li.active>a,
+.tabs-left>li.active>a:hover,
+.tabs-left>li.active>a:focus {
+  border-bottom-color: #ddd;
+  border-right-color: transparent;
+  background:#f92;
+  border:none;
+  border-radius:0px;
+  margin:0px;
+}
+.nav-tabs>li>a:hover {
+    /* margin-right: 2px; */
+    line-height: 1.42857143;
+    color: orange;
+    border: 1px solid transparent;
+  
+     border-radius: 4px 4px 0 0; 
+}
+.tabs-left>li.active>a::after{content: "";
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  
+  border-left: 10px solid #f90;
+
+    display: block;
+    width: 0;}
+</style>
+  
+ {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type = "text/css"/>
+  <link rel="stylesheet" href="{% static 'personal/css/custom.css' %}" type = "text/css"/>
+</head>
+<body>
+{% include "personal/includes/htmlsnippet.html" %}
+<center>
+     <div  class="col-lg-12">
+        <h3>Left Tabs</h3>
+        <hr/>
+        <div class="col-xs-3"> <!-- required for floating -->
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs tabs-left sideways">
+            <li class="active"><a href="#home-v" data-toggle="tab">1.Home</a></li>
+            <li><a href="#profile-v" data-toggle="tab">2.Profile</a></li>
+            <li><a href="#messages-v" data-toggle="tab">Messages</a></li>
+            <li><a href="#settings-v" data-toggle="tab">Settings</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-7">
+          <!-- Tab panes -->
+          <div class="tab-content" style="border: 1px solid #ccc;  border-radius: 8px 8px 8px 8px;">
+            <div class="tab-pane active" id="home-v">Home Tab.
+            <form><br>
+  <div class="form-group row" style="margin-left: 0px;">
+    <label for="exampleInputEmail1" class="col-sm-3 col-form-label">Email address</label>
+     <div class="col-sm-6">
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+    
+    
+  </div>
+    <div class="form-group row" style="margin-left: 0px;">
+   <label for="exampleInputPassword1" class="col-sm-3 col-form-label">Password</label>
+     <div class="col-sm-6">
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+    
+    
+  </div>
+  <br><br><br><br>
+ 
+<form method="POST"> {% csrf_token %}
+  {{ form }}
+  <button type="submit" class="btn btn-default">submit</button>
+</form>
+<br><br><br><br><br><br>
+  <button type="submit" class="btn btn-primary col-sm-3" style="margin-left: 210px;">Submit</button>
+  <br><br><br><br>
+</form>
+            </div>
+            <div class="tab-pane" id="profile-v">Profile Tab.</div>
+            <div class="tab-pane" id="messages-v">Messages Tab.</div>
+            <div class="tab-pane" id="settings-v">Settings Tab.</div>
+          </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+      </div>
+</center>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
